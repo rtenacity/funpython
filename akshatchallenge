@@ -1,0 +1,7 @@
+def myFunc(counter):
+  if counter == 1: print("This function has run " + str(counter)+ " time!");counter+=1
+  else: print("This function has run " + str(counter)+ " times!"); counter+=1
+  x=input("Again y/n: ")
+  if x=="y": myFunc(counter)
+  else: quit()
+myFunc(1)
