@@ -1,0 +1,13 @@
+import quantumrandom
+rand_integer = int(quantumrandom.randint(0, 10))
+while True:
+  user_input = input("Enter a guess here: ")
+  if user_input.isnumeric() == False:   print("Invalid Syntax!")
+  else: 
+    if int(user_input) == rand_integer:
+      print("Congrats! You won.")
+      j = input("Would you like to play again? Type y/n: ")
+      if j == "y": rand_integer = int(quantumrandom.randint(0, 10))
+      if j == "n": quit()
+    elif int(user_input) > rand_integer: print("Try a lower number.") 
+    elif int(user_input) < rand_integer: print("Try a higher number.")
